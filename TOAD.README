@@ -1,0 +1,100 @@
+The source code for the tool "centipede" is contained in the file
+centipede00.  To unpack and uncrypt this file, execute the 
+following:
+
+crypt key < centipede00 | cpio -icdv 
+
+where the encryption key that you supplied to TOAD is entered
+for key.
+
+This will produce the following directories:
+
+src/		doc/
+
+The directory src contains the following files: 
+
+Makefile	error.c		init_scr.c	playdisp.c	slugchoose.c
+cent.README	exit_game.c	killplayer.c	player.c	spichoose.c
+chk_coll.c	globals.c	objXobj.c	put_chunk.c	srvmouse.c
+chk_mecoll.c	init_game.c	perchoose.c	scochoose.c	start.c
+digits.c	init_round.c	playdefs.h	shotchoose.c	wormchoose.c
+
+The directory doc contains the following directories: 
+
+fmt/		unfmt/
+
+The directory fmt contains the following file: 
+
+cent.6
+
+The directory unfmt contains the following file: 
+
+cent.6
+
+File Sizes:
+===========
+
+The following is output from "wc" and can be checked against
+the files you received:
+
+Dir: src      123    348   2747 Makefile
+               33    165    978 cent.README
+              235    694   5014 chk_coll.c
+               37    115    833 chk_mecoll.c
+              359    565   4989 digits.c
+               23     71    467 error.c
+               86    273   1853 exit_game.c
+              547   1395  10811 globals.c
+               62    198   1567 init_game.c
+               69    209   1591 init_round.c
+              131    421   3241 init_scr.c
+               84    270   1935 killplayer.c
+               68    244   1713 objXobj.c
+              103    314   2709 perchoose.c
+              215   1037   6702 playdefs.h
+               64    208   1272 playdisp.c
+              134    434   3073 player.c
+               66    196   1613 put_chunk.c
+               31     98    761 scochoose.c
+               24     80    545 shotchoose.c
+               27     80    597 slugchoose.c
+               59    177   1318 spichoose.c
+               24     57    427 srvmouse.c
+               86    261   2035 start.c
+              160    526   4485 wormchoose.c
+Dir: doc/fmt
+              132    491   4316 cent.6
+Dir: doc/unfmt
+               72    502   2681 cent.6
+
+INSTALLATION INSTRUCTIONS
+===========================
+
+This section outlines the steps needed to install "centipede" on an
+AT&T 3B20 computer running UNIX(TM) System 5 Release 2.  Installation
+on other machines may differ and is the responsiblity of the installer
+to reconcile.
+
+Prerequisites:
+	This package requires the following facilities to
+	be available on your machine, before installation and use:
+		DMD Development Facility
+
+To read before installing:
+	After unbundling, please scan the documentation and any
+	included README files.  These will contain useful infor-
+	mation needed to build "centipede".
+
+To make the source:
+	Execute:
+		make
+
+	and wait a while.
+
+To create the documentation:
+	The documents, if requested in nroff format, can be created
+	by issuing the following commands:
+		nroff -man cent.6 | col >cent.6M
+
+If you have any problems, contact the TOC (201) 870-7944,
+7952, Cornet 266-7944, 7952 or through mail at homxb!gtoad.

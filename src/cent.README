@@ -1,0 +1,33 @@
+
+		CENTIPEDE - The Bitmapped Insect Shooting Game
+				by Pat Autilio
+
+Creating the executable:
+	Just un'cpio' the source if you haven't already as follows:
+
+		* Place the cpio file (e.g. 'cent.cpio') in a
+			directory of your choosing.
+		* Type 'cpio -ic < cent.cpio'.
+		* If you're going to use a 'blit' then type:
+			ln Makefile.jerq Makefile
+		  otherwise if you're using a 5620DMD type:
+			ln Makefile.dmd Makefile
+		* Type 'make'
+
+To play 'centipede':
+		* Run layers
+		* Type '68ld cent.jerq.m' on blit or
+			'32ld cent.dmd.m' on 5620.
+		* Wait a potentially long time.
+		* Hit any key to start.
+		* Move the mouse to control your player at the
+			bottom of the screen. Push the middle button
+			to shoot a missile. 'q' to exit.
+
+Misfeatures:
+		* If you press the left or right buttons while
+			playing the game everything will stop. Just
+			let go of the button to continue.
+
+High score to date (full screen play only):
+		* 131744 - Achieved by Steve Humphrey (on a blit)

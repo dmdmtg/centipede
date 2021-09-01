@@ -1,0 +1,72 @@
+.TH CENTIPEDE 6 8/5/85
+.SH NAME
+centipede - The insect shooting game
+.SH SYNOPSIS
+.B "68ld cent.jerq.m
+or
+.br
+.B "32ld cent.dmd.m"
+.SH "OBJECT OF GAME"
+Score as many points as possible by defeating the objects that
+appear on the screen.
+.SH DESCRIPTION
+.PP
+.B centipede
+is a game designed to run in a layer on either the blit or the
+5620 Dot Mapped
+Display terminal. It makes use of the mouse connected to these
+terminals to control the player's icon and to shoot at
+other objects that appear on the screen.
+.PP
+The program is downloaded to the terminal using 68ld for the blit
+or 32ld for the 5620. The screen should then say:
+.ce 2
+C E N T I P E D E
+Hit any key to start.
+When you hit a key, you will then have control of a icon looking
+a little like a flatworm that appears on the screen.
+The icon is moved by moving the mouse. The
+middle button is used to shoot a missile upwards. Only one missile
+may be on the screen at a time. The middle button may be held down
+to shoot the missile as quickly as possible.
+.PP
+The game may be stopped at any time by typing 'q'. Also the left and
+right buttons on the mouse behave as they normally do and may be
+used to select other layers, create new layers, etc.
+.PP
+In general, your icon may not bump into anything that is
+moving on the screen without being killed. You are given three men
+at the beginning of every game with an extra man awarded every 12000
+points.
+.PP
+The following are some of the objects that appear during the course
+of the game:
+.TP 24
+\fBmushrooms\fR	(value: 1 point)
+It takes four shots to kill a mushroom. Mushrooms merely deflect the
+centipede.
+.TP 24
+\fBcentipede\fR	(value: 10 points per segment (100 points for head))
+The centipede winds down the screen by changing direction whenever
+it hits a mushroom or the edge of the screen. Any segment of the
+centipede you shoot will turn into a mushroom and may cause the
+centipede to split into two smaller centipedes.
+.TP 24
+\fBspider\fR	(value: 300, 600 or 900 points)
+The spider bounces around and takes away any mushrooms it hits. The
+closer you are to it when you kill it, the more points you get.
+.TP 24
+\fBslug\fR	(value: 200 points)
+The slug, also known as the flea, will come down and drop new
+mushrooms if there are too few on the bottom of the screen. You must
+shoot the slug twice to kill it.
+.TP 24
+\fBscorpion\fR	(value: 1000)
+After a while the scorpion will zip across the screen and turn any
+mushrooms it hits into smiley faces. When ever a centipede segment
+hits a smiley faced mushroom it will plummet directly to the bottom
+of the screen.
+.SH AUTHOR
+Pat Autilio (phoenix!autilio) (LZ 3F310, 576-3547)
+.SH BUGS
+Please let me know of any you find.
